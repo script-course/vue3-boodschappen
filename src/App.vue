@@ -1,14 +1,14 @@
 <template>
-  <GroceriesTable msg="Groceries exercise in Vue 3.0 + Vite" />
+  <GroceriesTable />
 </template>
 
 <script>
-import GroceriesTable from './components/GroceriesTable.vue'
+import GroceriesTable from "./components/GroceriesTable.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    GroceriesTable
-  }
-}
+    GroceriesTable,
+  },
+};
 </script>
