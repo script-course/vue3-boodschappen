@@ -1,14 +1,7 @@
 <template>
-  <GroceriesTable />
+  <groceries-table />
 </template>
 
-<script>
+<script setup>
 import GroceriesTable from "./components/GroceriesTable.vue";
-
-export default {
-  name: "App",
-  components: {
-    GroceriesTable,
-  },
-};
 </script>
