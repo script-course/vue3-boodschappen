@@ -1,0 +1,22 @@
+{
+    "name": "vite-3-template",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview",
+        "lint": "eslint \"src/**/*.{js,vue}\" --fix --cache ",
+        "prettier": "prettier --check \"src/**/*.{js,vue}\""
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "vue": "^3.2.16"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^1.9.3",
+        "eslint": "^7.28.0",
+        "eslint-plugin-vue": "^7.11.1",
+        "prettier": "^2.3.1",
+        "vite": "^2.6.4"
+    }
+}
