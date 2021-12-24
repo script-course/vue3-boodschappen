@@ -12,7 +12,7 @@
             <td>
                 <InputValue v-model.number="grocery.price" />
             </td>
-            <td><input type="number" v-model="grocery.amount" min="0" /></td>
+            <td><input v-model="grocery.amount" type="number" min="0" /></td>
             <td>{{ (grocery.amount * grocery.price).toFixed(2) }}</td>
         </tr>
         <tr>
