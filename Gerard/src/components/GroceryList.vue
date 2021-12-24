@@ -10,6 +10,7 @@
         </thead>
         <tbody>
             <GroceryRow v-for="grocery in groceries" :key="grocery.name" :grocery="grocery" />
+            <AddGroceryRow />
         </tbody>
         <tfoot>
             <tr>
@@ -22,6 +23,7 @@
 
 <script setup>
 import GroceryRow from './GroceryRow.vue';
+import AddGroceryRow from './AddGroceryRow.vue';
 import {groceries, getGroceriesFromServer} from '../store/groceries';
 import {onMounted, computed} from 'vue';
 

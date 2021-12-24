@@ -17,14 +17,10 @@ const serverResponse = [
 ];
 
 /**
- * @param {RawGrocery[]} newGroceries
+ * @param {RawGrocery} newGrocery
  */
-const setGroceries = newGroceries => {
-    for (const {name, price, amount} of newGroceries) {
-        groceries[name] = transformGrocery(name, price, amount);
-    }
-};
+export const addGroceryToList = ({name, price, amount}) => (groceries[name] = transformGrocery(name, price, amount));
 
 export const getGroceriesFromServer = () => {
-    setGroceries(serverResponse);
+    for (const grocery of serverResponse) addGroceryToList(grocery);
 };
