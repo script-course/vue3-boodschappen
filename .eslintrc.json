@@ -31,7 +31,6 @@
         "quotes": ["warn", "single", {"avoidEscape": true}],
         "no-console": "warn",
         "no-unused-vars": ["error", {"argsIgnorePattern": "_"}],
-
         /**
          * Vue specific rules
          */
@@ -87,7 +86,6 @@
                 "html": {"void": "always"}
             }
         ],
-
         "vue/no-mutating-props": "error"
     }
 }
