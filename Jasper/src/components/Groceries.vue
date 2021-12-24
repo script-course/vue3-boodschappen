@@ -7,7 +7,7 @@
             <th>Amount</th>
             <th>Subtotal</th>
         </tr>
-        <tr v-for="grocery in groceryList">
+        <tr v-for="grocery in groceryList" :key="grocery.name">
             <td>{{ grocery.name }}</td>
             <td>
                 <InputValue v-model.number="grocery.price" />
