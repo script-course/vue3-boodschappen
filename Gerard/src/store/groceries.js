@@ -11,7 +11,7 @@ export const groceries = reactive({});
 const serverResponse = [
     {
         name: 'Brood',
-        price: 0.15,
+        price: 1.15,
         amount: 2,
     },
 ];

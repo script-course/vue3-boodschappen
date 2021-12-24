@@ -1,4 +1,4 @@
-import {Ref} from 'vue';
+import {ComputedRef, Ref} from 'vue';
 
 interface CustomTargetInputEvent extends InputEvent {
     target: HTMLInputElement | null;
@@ -11,7 +11,7 @@ export interface RawGrocery {
 }
 
 export interface Grocery extends RawGrocery {
-    get total(): string;
+    total: string;
     update(event: CustomTargetInputEvent): void;
 }
 

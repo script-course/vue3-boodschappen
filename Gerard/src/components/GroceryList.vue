@@ -11,15 +11,27 @@
         <tbody>
             <GroceryRow v-for="grocery in groceries" :key="grocery.name" :grocery="grocery" />
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Totaal</td>
+                <td>{{ total }}</td>
+            </tr>
+        </tfoot>
     </table>
 </template>
 
 <script setup>
 import GroceryRow from './GroceryRow.vue';
 import {groceries, getGroceriesFromServer} from '../store/groceries';
-import {onMounted} from 'vue';
+import {onMounted, computed} from 'vue';
 
 onMounted(() => getGroceriesFromServer());
+
+const total = computed(() => {
+    return Object.values(groceries)
+        .reduce((acc, {total}) => acc + parseFloat(total), 0)
+        .toFixed(2);
+});
 </script>
 
 <style scoped>
